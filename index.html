@@ -11,18 +11,74 @@
 
 <body class="bg-[#d7ebec]">
 
-<header class="bg-[#117a72] text-white px-6 md:px-16 lg:px-24 py-5 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+<header class="bg-[#117a72] text-white px-6 md:px-16 lg:px-24 py-5">
 
-  <div class="text-lg md:text-xl font-semibold">
-    🧬 YouthHIV Awareness
+  <div class="flex justify-between items-center">
+
+    <div class="text-lg md:text-xl font-semibold">
+      🧬 YouthHIV Awareness
+    </div>
+
+    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+      ☰
+    </button>
+
+    <ul class="hidden md:flex gap-8 font-medium">
+      <li>
+        <a href="index.html" class="underline text-gray-200">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="resume.html" class="hover:text-gray-200 transition">
+          Resume
+        </a>
+      </li>
+      <li>
+        <a href="literature.html" class="hover:text-gray-200 transition">
+          Literature Review
+        </a>
+      </li>
+      <li>
+        <a href="#" class="hover:text-gray-200 transition">
+          Resources ▾
+        </a>
+      </li>
+      <li>
+        <a href="#" class="hover:text-gray-200 transition">
+          Intervention-Program-Plan
+        </a>
+      </li>
+    </ul>
+
   </div>
 
-  <ul class="flex flex-col md:flex-row gap-3 md:gap-8 list-none font-medium">
-    <li>Home</li>
-    <li>Resume</li>
-    <li>Literature Review</li>
-    <li>Resources ▾</li>
-    <li>Intervention-Program-Plan</li>
+  <ul id="mobile-menu" class="hidden flex-col gap-4 mt-4 font-medium md:hidden">
+    <li>
+      <a href="index.html" class="block underline text-gray-200">
+        Home
+      </a>
+    </li>
+    <li>
+      <a href="resume.html" class="block hover:text-gray-200 transition">
+        Resume
+      </a>
+    </li>
+    <li>
+      <a href="literature.html" class="block hover:text-gray-200 transition">
+        Literature Review
+      </a>
+    </li>
+    <li>
+      <a href="#" class="block hover:text-gray-200 transition">
+        Resources
+      </a>
+    </li>
+    <li>
+      <a href="#" class="block hover:text-gray-200 transition">
+        Intervention-Program-Plan
+      </a>
+    </li>
   </ul>
 
 </header>
@@ -93,7 +149,6 @@
     </div>
 
   </div>
-
 </section>
 
 <section class="bg-[#e6f2f3] px-6 md:px-16 lg:px-24 py-16">
@@ -122,7 +177,6 @@
         <img src="doctor.jpg" alt=""
           class="w-full h-40 object-cover rounded-xl shadow-md">
       </div>
-
     </div>
 
     <div class="space-y-8 text-gray-700 text-sm md:text-base leading-relaxed">
@@ -153,12 +207,8 @@
           This communication intervention proves that the availability of education and student-specific prevention measures is needed. It emphasizes the fact that it is not just about avoiding abstinence or protection during sexual activity, but also about being aware of your health by regularly testing it.
         </p>
       </div>
-
     </div>
-
   </div>
-
-
 </section>
 
 <section class="bg-[#e6f2f3] px-6 md:px-16 lg:px-24 py-16">
@@ -271,6 +321,19 @@
   </div>
 
 </footer>
+
+<script>
+
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (menuBtn && mobileMenu) { 
+    menuBtn.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+</script>
+
 
 </body>
 </html>
